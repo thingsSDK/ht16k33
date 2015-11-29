@@ -1,6 +1,6 @@
 {
   "name": "espruino-adafruit-led-backpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Espruino Driver for Adafruit's LED Matrix + Backpack ",
   "main": "index.js",
   "scripts": {
