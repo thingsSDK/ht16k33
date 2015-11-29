@@ -1,0 +1,27 @@
+{
+  "name": "espruino-adafruit-led-backpack",
+  "version": "1.0.0",
+  "description": "Espruino Driver for Adafruit's LED Matrix + Backpack ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chalkers/espruino-adafruit-matrix8x8.git"
+  },
+  "keywords": [
+    "espruino",
+    "adafruit",
+    "led",
+    "matrix",
+    "backpack",
+    "8x8"
+  ],
+  "author": "Andrew Chalkley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chalkers/espruino-adafruit-led-backpack/issues"
+  },
+  "homepage": "https://github.com/chalkers/eespruino-adafruit-led-backpack#readme"
+}
