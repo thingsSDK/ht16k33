@@ -1,6 +1,6 @@
 # espruino-adafruit-led-backpack
 
-This is an driver that closely mirrors the [Adafruit's LED Backpack Library](https://github.com/adafruit/Adafruit-LED-Backpack-Library).
+This is a driver that closely mirrors the [Adafruit's LED Backpack Library](https://github.com/adafruit/Adafruit-LED-Backpack-Library).
 
 This package currently works with Adafruit 8x8 Single Color LED Backpacks.
 
