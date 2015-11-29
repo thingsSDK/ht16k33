@@ -65,48 +65,53 @@ function delay(time) {
   while(i < time * 10) {  i++; }
 }
 
-//Draws Smiley Face
-matrix.clear();
-matrix.drawBitmap(smileBmp);
-matrix.writeDisplay();
-delay(500);
+//Run Example Code
+function testDisplay() {
+  //Draws Smiley Face
+  matrix.clear();
+  matrix.drawBitmap(smileBmp);
+  matrix.writeDisplay();
+  delay(500);
 
-//Draws Neutral Face
-matrix.clear();
-matrix.drawBitmap(neutralBmp);
-matrix.writeDisplay();
-delay(500);
+  //Draws Neutral Face
+  matrix.clear();
+  matrix.drawBitmap(neutralBmp);
+  matrix.writeDisplay();
+  delay(500);
 
-//Draws Frowny Face
-matrix.clear();
-matrix.drawBitmap(frownBmp);
-matrix.writeDisplay();
-delay(500);
+  //Draws Frowny Face
+  matrix.clear();
+  matrix.drawBitmap(frownBmp);
+  matrix.writeDisplay();
+  delay(500);
 
-//Draws a pixel at the top left x = 0, y = 0
-matrix.clear();
-matrix.drawPixel(0, 0);
-matrix.writeDisplay();
-delay(500);
+  //Draws a pixel at the top left x = 0, y = 0
+  matrix.clear();
+  matrix.drawPixel(0, 0);
+  matrix.writeDisplay();
+  delay(500);
 
-//Draws a diagonal line between x1 = 0, y1 = 0 and x2 = 7, y2 = 7
-matrix.clear();
-matrix.drawLine(0,0, 7,7);
-matrix.writeDisplay();
-delay(500);
+  //Draws a diagonal line between x1 = 0, y1 = 0 and x2 = 7, y2 = 7
+  matrix.clear();
+  matrix.drawLine(0,0, 7,7);
+  matrix.writeDisplay();
+  delay(500);
 
-//Draws a rectangle at x = 0, y = 0 and a witdth = 8 and height = 8
-matrix.clear();
-matrix.drawRect(0,0, 8,8);
-matrix.writeDisplay();
-delay(500);
+  //Draws a rectangle at x = 0, y = 0 and a witdth = 8 and height = 8
+  matrix.clear();
+  matrix.drawRect(0,0, 8,8);
+  matrix.writeDisplay();
+  delay(500);
 
-//Draws the same rectangle as abover with a filled in rectangle 4 by 4 starting at x = 2, y = 2
-matrix.clear();
-matrix.drawRect(0,0, 8,8);
-matrix.fillRect(2,2, 4,4);
-matrix.writeDisplay();
-delay(500);
+  //Draws the same rectangle as abover with a filled in rectangle 4 by 4 starting at x = 2, y = 2
+  matrix.clear();
+  matrix.drawRect(0,0, 8,8);
+  matrix.fillRect(2,2, 4,4);
+  matrix.writeDisplay();
+  delay(500);
+}
+
+testDisplay();
 ```
 
 Here's a gif of the above code in action:
