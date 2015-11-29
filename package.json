@@ -1,6 +1,6 @@
 {
   "name": "espruino-adafruit-led-backpack",
-  "version": "1.0.1",
+  "version": "1.0.2 ",
   "description": "Espruino Driver for Adafruit's LED Matrix + Backpack ",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chalkers/espruino-adafruit-matrix8x8.git"
+    "url": "git+https://github.com/chalkers/espruino-adafruit-led-backpack.git"
   },
   "keywords": [
     "espruino",
