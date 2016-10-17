@@ -1,6 +1,6 @@
 {
   "name": "espruino-adafruit-led-backpack",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Espruino Driver for Adafruit's LED Matrix + Backpack",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "led",
     "matrix",
     "backpack",
-    "8x8"
+    "8x8",
+    "16x8"
   ],
   "author": "Andrew Chalkley",
   "license": "MIT",
