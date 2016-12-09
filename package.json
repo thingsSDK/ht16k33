@@ -1,28 +1,29 @@
 {
-  "name": "espruino-adafruit-led-backpack",
-  "version": "1.1.0",
-  "description": "Espruino Driver for Adafruit's LED Matrix + Backpack",
-  "main": "index.js",
+  "name": "thingssdk-adafruit-matrix",
+  "version": "1.0.0",
+  "description": "ES6 compatible display driver for Adafruit matrices",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chalkers/espruino-adafruit-led-backpack.git"
+    "url": "git+ssh://git@github.com/thingsSDK/thingssdk-adafruit-matrix.git"
   },
   "keywords": [
-    "espruino",
+    "thingssdk",
     "adafruit",
+    "espruino",
     "led",
     "matrix",
     "backpack",
     "8x8",
-    "16x8"
+    "HT16K33"
   ],
-  "author": "Andrew Chalkley",
+  "author": "Andrew Chalkley <andrew@chalkley.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chalkers/espruino-adafruit-led-backpack/issues"
+    "url": "https://github.com/thingsSDK/thingssdk-adafruit-matrix/issues"
   },
-  "homepage": "https://github.com/chalkers/eespruino-adafruit-led-backpack#readme"
+  "homepage": "https://github.com/thingsSDK/thingssdk-adafruit-matrix#readme"
 }
