@@ -1,4 +1,4 @@
-import {createMatrix} from './main';
+import { createMatrix } from './main';
 
 /**
  * Rotates an 8-bit binary value right one bit.
@@ -18,7 +18,7 @@ function rotate(value) {
     return eightBitArray[0];
 }
 
-function formatBitMap(bitmap) {
+function formatBimap(bitmap) {
     const formattedBitmap = [];
 
     bitmap.forEach(function (i) {
@@ -26,11 +26,11 @@ function formatBitMap(bitmap) {
         //Since the 8x8 Matrix chip can render on an 16x8 screen we have to write an empty byte
         formattedBitmap.push(0);
     });
-    
+
     return formattedBitmap.map(rotate);
 }
 
 export default function connect(setup, write, address, brightness) {
-    return createMatrix(setup, formatBitMap, write, address, brightness);
+    return createMatrix(setup, formatBimap, write, address, brightness);
 }
 

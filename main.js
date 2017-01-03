@@ -1,5 +1,8 @@
 import { TURN_DISPLAY_ON, TURN_OSCILLATOR_ON, SET_BRIGHTNESS } from './common';
 
+const MAX_BRIGHTNESS = 15;
+const MAX_BLINK_RATE = 3;
+
 export function createMatrix(setup, format, write, address, brightness) { 
     const matrix = {
         render: bitmap => write(address, 0, format(bitmap)),
@@ -22,5 +25,9 @@ export function createMatrix(setup, format, write, address, brightness) {
  * @param {number} brightness - brightness 0 through 15
  */
 export function setBrightness(matrix, brightness) {
-    matrix.write(SET_BRIGHTNESS | brightness);
+    matrix.write(SET_BRIGHTNESS | brightness & MAX_BRIGHTNESS);
+}
+
+export function setBlinkRate(matrix, rate) {
+    matrix.write(TURN_DISPLAY_ON | (rate & MAX_BLINK_RATE) << 1);
 }

@@ -1,16 +1,19 @@
 {
-  "name": "thingssdk-adafruit-matrix",
+  "name": "@thingssdk/HT16K33",
   "version": "1.0.0",
   "description": "ES6 compatible display driver for Adafruit matrices",
   "main": "main.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc --include **/*.js --require babel-core/register mocha test/index_test.js",
+    "test:coverage": "npm test && nyc report --reporter=lcov",
+    "prepublish": "npm test"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/thingsSDK/thingssdk-adafruit-matrix.git"
   },
   "keywords": [
+    "HT16K33",
     "thingssdk",
     "adafruit",
     "espruino",
@@ -18,12 +21,23 @@
     "matrix",
     "backpack",
     "8x8",
-    "HT16K33"
+    "16x8",
+    "seven",
+    "fourteen",
+    "alphanumeric",
+    "segment",
+    "display"
   ],
   "author": "Andrew Chalkley <andrew@chalkley.org>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/thingsSDK/thingssdk-adafruit-matrix/issues"
   },
-  "homepage": "https://github.com/thingsSDK/thingssdk-adafruit-matrix#readme"
+  "homepage": "https://github.com/thingsSDK/thingssdk-adafruit-matrix#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.0.0"
+  }
 }
