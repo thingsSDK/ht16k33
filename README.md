@@ -75,45 +75,40 @@ Here's a gif of the above code in action:
 
 ![](8x8.gif)
 
-## Example Code for 16x8 Matrix
+## Example Code for 16 x 8 Matrix
 
 ```javascript
-var Matrix16x8 = require("espruino-adafruit-led-backpack").Matrix16x8;
+import { connect16x8 } from '@thingssdk/HT16K33/espruino';
 
-var matrix = new Matrix16x8({scl:B6, sda:B7, address:0x70, brightness: 0});
-
-// draw smile and frown side by side
-var smileFrownBmp = [
-    0b00111100, 0b00111100,
-    0b01000010, 0b01000010,
-    0b10100101, 0b10100101,
-    0b10000001, 0b10000001,
-    0b10100101, 0b10011001,
-    0b10011001, 0b10100101,
-    0b01000010, 0b01000010,
-    0b00111100, 0b00111100
+const matrix = connect16x8()
+// Draw smile and frown side by side
+const smileFrownBmp = [
+  0b00111100, 0b00111100,
+  0b01000010, 0b01000010,
+  0b10100101, 0b10100101,
+  0b10000001, 0b10000001,
+  0b10100101, 0b10011001,
+  0b10011001, 0b10100101,
+  0b01000010, 0b01000010,
+  0b00111100, 0b00111100
 ];
 
-matrix.clear();
-matrix.drawBitmap(smileFrownBmp);
-matrix.writeDisplay();
+//Run Example Code
+function main() {
+  matrix.render(smileFrownBmp);
+}
 ```
 ![](smile_frown.jpg)
 
-The functions `drawLine`, `drawPixel`, `drawRect` and `fillRect` work the same as for the 8x8 Matrix except you can address up to 16 pixels on the x axis:
+
+## Example Code for 7 Segment Display
 
 ```javascript
-// Draws a diagonal line between x1 = 3, y1 = 3 and x2 = 15, y2 = 7
-matrix.drawLine(3, 3, 15, 7);
+
 ```
 
+## Example Code for 14 Segment Display
 
-## Todos - A.K.A. Please Help
-- [ ] Finish Parity for 8 x 8 Display
-  - [ ] `drawCircle()`
-  - [ ] `setTextWrap()`
-  - [ ] `setTextColor()`
-  - [ ] `setCursor()`
-  - [ ] `print()`
-  - [ ] `setRotation()`
-- [ ] Implement 7 Segment Display
+```javascript
+
+```

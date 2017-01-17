@@ -18,7 +18,7 @@ export function createMatrix(setup, format, write, address, brightness) {
 }
 
 /**
- *  Set the brightnes of the LEDs. A number 0 through 15.
+ *  Set the brightness of the LEDs. A number 0 through 15.
  * 
  * @export
  * @param {Object} matrix - the configured display
@@ -28,6 +28,13 @@ export function setBrightness(matrix, brightness) {
     matrix.write(SET_BRIGHTNESS | brightness & MAX_BRIGHTNESS);
 }
 
+/**
+ *  Set the blink rate of the display. A number 0 through 3.
+ * 
+ * @export
+ * @param {Object} matrix - the configured display
+ * @param {number} rate - brightness 0 through 3
+ */
 export function setBlinkRate(matrix, rate) {
     matrix.write(TURN_DISPLAY_ON | (rate & MAX_BLINK_RATE) << 1);
 }

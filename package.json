@@ -4,7 +4,7 @@
   "description": "ES6 compatible display driver for Adafruit matrices",
   "main": "main.js",
   "scripts": {
-    "test": "nyc --include **/*.js --require babel-core/register mocha test/index_test.js",
+    "test": "nyc --include *.js --require babel-core/register mocha test/*.js",
     "test:coverage": "npm test && nyc report --reporter=lcov",
     "prepublish": "npm test"
   },
