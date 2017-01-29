@@ -1,12 +1,11 @@
 {
   "name": "@thingssdk/HT16K33",
   "version": "1.0.0",
-  "description": "ES6 compatible display driver for Adafruit matrices",
+  "description": "ES6 compatible display driver for Adafruit matrices, 7 segment and 14 segment displays.",
   "main": "main.js",
   "scripts": {
     "test": "nyc --include *.js --require babel-core/register mocha test/*.js",
-    "test:coverage": "npm test && nyc report --reporter=lcov",
-    "prepublish": "npm test"
+    "test:coverage": "npm test && nyc report --reporter=lcov"
   },
   "repository": {
     "type": "git",
