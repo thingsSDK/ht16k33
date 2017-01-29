@@ -1,5 +1,10 @@
 # HT16K33 for JavaScript
 
+[![Build Status](https://travis-ci.org/thingsSDK/HT16K33.svg?branch=master)](https://travis-ci.org/thingsSDK/HT16K33) 
+[![codecov](https://codecov.io/gh/thingsSDK/HT16K33/branch/master/graph/badge.svg)](https://codecov.io/gh/thingsSDK/HT16K33)
+[![Dependency Status](https://david-dm.org/thingsSDK/HT16K33.svg)](https://david-dm.org/thingsSDK/HT16K33)
+[![devDependency Status](https://david-dm.org/thingsSDK/HT16K33/dev-status.svg)](https://david-dm.org/thingsSDK/HT16K33#info=devDependencies)
+
 This package works with LED matrix backpacks with the HT16K33 controller chip specifically the Adafruit 8x8 monochrome, 8x8 bicolor and 16x8 monochrome LED Backpacks.
 
 * 8x8 0.8" ([872](https://www.adafruit.com/products/872), [871](https://www.adafruit.com/products/871), [870](https://www.adafruit.com/products/870))
