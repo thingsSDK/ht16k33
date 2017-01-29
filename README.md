@@ -13,6 +13,8 @@ This works with the 7-Segment backpacks and 14-segment alphanumeric backpacks.
 
 ## Example Code for 8 x 8 Matrix
 
+![](docs/8x8.gif)
+
 ```javascript
 import { connect8x8 } from '@thingssdk/HT16K33/espruino';
 
@@ -71,11 +73,9 @@ function main() {
 }
 ```
 
-Here's a gif of the above code in action:
-
-![](docs/8x8.gif)
-
 ## Example Code for 16 x 8 Matrix
+
+![](docs/16x8.gif)
 
 ```javascript
 import { connect16x8 } from '@thingssdk/HT16K33/espruino';
@@ -113,12 +113,11 @@ function main() {
     setTimeout(() => matrix.render(smileMehBmp), 1000);
 }
 ```
-Here's a gif of the above code in action:
-
-![](docs/16x8.gif)
 
 
-## Example Code for 8x8 Bi-Color Matrix
+## Example Code for 8 x 8 Bi-Color Matrix
+
+![](docs/8x8bicolor.gif)
 
 ```javascript
 import { connect8x8bicolor } from '@thingssdk/HT16K33/espruino';
@@ -194,11 +193,9 @@ function main() {
 }
 ```
 
-Here's a gif of the above code in action:
-
-![](docs/8x8bicolor.gif)
-
 ## Example Code for 7 Segment Display
+
+![](docs/7segment.gif)
 
 ```javascript
 import { connectSevenSegment } from '@thingssdk/HT16K33/espruino';
@@ -242,12 +239,9 @@ function main() {
 }
 ```
 
-
-Here's a gif of the above code in action:
-
-![](docs/7segment.gif)
-
 ## Example Code for 14 Segment Display
+
+![](docs/14segment.gif)
 
 ```javascript
 import { connectFourteenSegment } from '@thingssdk/HT16K33/espruino';
@@ -290,6 +284,3 @@ function main() {
     }, 6000);
 }
 ```
-Here's a gif of the above code in action:
-
-![](docs/14segment.gif)
