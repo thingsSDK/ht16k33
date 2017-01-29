@@ -54,26 +54,26 @@ const frownBmp = [
 
 //Run Example Code
 function main() {
-  const matrix = connect8x8();
+    const matrix = connect8x8();
 
-  //Draws Smiley Face
-  matrix.render(smileBmp);
+    //Draws Smiley Face
+    matrix.render(smileBmp);
 
-  //Draws Neutral Face after 1/2 second
-  setTimeout(() => {
-    matrix.render(neutralBmp);
-  }, 500);
+    //Draws Neutral Face after 1 second
+    setTimeout(() => {
+        matrix.render(neutralBmp);
+    }, 1000);
 
-  //Draws Frowny Face
-  setTimeout(() =>{
-    matrix.render(frownBmp);
-  }, 1000);
+    //Draws Frowny Face after 2 seconds
+    setTimeout(() => {
+        matrix.render(frownBmp);
+    }, 11000);
 }
 ```
 
 Here's a gif of the above code in action:
 
-![](8x8.gif)
+![](docs/8x8.gif)
 
 ## Example Code for 16 x 8 Matrix
 
@@ -83,32 +83,213 @@ import { connect16x8 } from '@thingssdk/HT16K33/espruino';
 const matrix = connect16x8()
 // Draw smile and frown side by side
 const smileFrownBmp = [
-  0b00111100, 0b00111100,
-  0b01000010, 0b01000010,
-  0b10100101, 0b10100101,
-  0b10000001, 0b10000001,
-  0b10100101, 0b10011001,
-  0b10011001, 0b10100101,
-  0b01000010, 0b01000010,
-  0b00111100, 0b00111100
+    0b00111100, 0b00111100,
+    0b01000010, 0b01000010,
+    0b10100101, 0b10100101,
+    0b10000001, 0b10000001,
+    0b10100101, 0b10011001,
+    0b10011001, 0b10100101,
+    0b01000010, 0b01000010,
+    0b00111100, 0b00111100
+];
+// Draw smile and mehside by side
+const smileMehBmp = [
+    0b00111100, 0b00111100,
+    0b01000010, 0b01000010,
+    0b10100101, 0b10100101,
+    0b10000001, 0b10000001,
+    0b10100101, 0b10000001,
+    0b10011001, 0b10111101,
+    0b01000010, 0b01000010,
+    0b00111100, 0b00111100
 ];
 
 //Run Example Code
 function main() {
-  matrix.render(smileFrownBmp);
+    //Render bitmap of smily face and frown
+    matrix.render(smileFrownBmp);
+
+    //Render bitmap of smily face and meh face 
+    setTimeout(() => matrix.render(smileMehBmp), 1000);
 }
 ```
-![](smile_frown.jpg)
+Here's a gif of the above code in action:
 
+![](docs/16x8.gif)
+
+
+## Example Code for 8x8 Bi-Color Matrix
+
+```javascript
+import { connect8x8bicolor } from '@thingssdk/HT16K33/espruino';
+
+//Squint a little and you can see the faces!
+
+// :) - Green
+const smileBmp = [
+    0b00111100, 0b00000000,
+    0b01000010, 0b00000000,
+    0b10100101, 0b00000000,
+    0b10000001, 0b00000000,
+    0b10100101, 0b00000000,
+    0b10011001, 0b00000000,
+    0b01000010, 0b00000000,
+    0b00111100, 0b00000000
+];
+//:| - Orange
+const neutralBmp = [
+    0b00111100, 0b00111100,
+    0b01000010, 0b01000010,
+    0b10100101, 0b10100101,
+    0b10000001, 0b10000001,
+    0b10111101, 0b10111101,
+    0b10000001, 0b10000001,
+    0b01000010, 0b01000010,
+    0b00111100, 0b00111100
+];
+//:( - Red
+const frownBmp = [
+    0b00000000, 0b00111100,
+    0b00000000, 0b01000010,
+    0b00000000, 0b10100101,
+    0b00000000, 0b10000001,
+    0b00000000, 0b10011001,
+    0b00000000, 0b10100101,
+    0b00000000, 0b01000010,
+    0b00000000, 0b00111100
+];
+// :) - Multicolor Face
+const multiSmileBmp = [
+    0b00111100, 0b00000000,
+    0b01000010, 0b00000000,
+    0b10100101, 0b00100100,
+    0b10000001, 0b00000000,
+    0b10000001, 0b00100100,
+    0b10000001, 0b00011000,
+    0b01000010, 0b00000000,
+    0b00111100, 0b00000000
+];
+
+//Run Example Code
+function main() {
+    const matrix = connect8x8bicolor();
+
+    //Draws Smiley Face
+    matrix.render(smileBmp);
+
+    //Draws Neutral Face after 1 second
+    setTimeout(() => {
+        matrix.render(neutralBmp);
+    }, 1000);
+
+    //Draws Frowny Face after 2 seconds
+    setTimeout(() => {
+        matrix.render(frownBmp);
+    }, 2000);
+
+    //Draws Multicolor Face after 3 seconds
+    setTimeout(() => {
+        matrix.render(multiSmileBmp);
+    }, 3000);
+}
+```
+
+Here's a gif of the above code in action:
+
+![](docs/8x8bicolor.gif)
 
 ## Example Code for 7 Segment Display
 
 ```javascript
+import { connectSevenSegment } from '@thingssdk/HT16K33/espruino';
 
+//Run Example Code
+function main() {
+    const matrix = connectSevenSegment();
+
+    //You can render numbers
+    matrix.render(42);
+
+    //Negative numbers
+    setTimeout(() => {
+        matrix.render(-999);
+    }, 1000);
+
+    //Times and strings
+    setTimeout(() => {
+        matrix.render("04:20");
+    }, 2000);
+
+    //Numbers with decimal places
+    setTimeout(() => {
+        matrix.render(3.141);
+    }, 3000);
+
+    //Or strings with multiple dots
+    setTimeout(() => {
+        matrix.render("1.2.3.4.");
+    }, 4000);
+
+    //Even, just dashes
+    setTimeout(() => {
+        matrix.render("----");
+    }, 5000);
+
+    //Spaces are valid too
+    setTimeout(() => {
+        matrix.render("0  -");
+    }, 6000);
+}
 ```
+
+
+Here's a gif of the above code in action:
+
+![](docs/7segment.gif)
 
 ## Example Code for 14 Segment Display
 
 ```javascript
+import { connectFourteenSegment } from '@thingssdk/HT16K33/espruino';
 
+//Run Example Code
+function main() {
+    const matrix = connectFourteenSegment();
+
+    //You can render numbers
+    matrix.render(42);
+
+    //Negative numbers
+    setTimeout(() => {
+        matrix.render(-999);
+    }, 1000);
+
+    //Letters and symbols
+    setTimeout(() => {
+        matrix.render("HI@U");
+    }, 2000);
+
+    //Numbers with decimal places
+    setTimeout(() => {
+        matrix.render(3.141);
+    }, 3000);
+
+    //Or strings with multiple dots
+    setTimeout(() => {
+        matrix.render("1.2.3.4.");
+    }, 4000);
+
+    //Uppercase letters
+    setTimeout(() => {
+        matrix.render("UPPR");
+    }, 5000);
+
+    //And lowercase
+    setTimeout(() => {
+        matrix.render("lowr");
+    }, 6000);
+}
 ```
+Here's a gif of the above code in action:
+
+![](docs/14segment.gif)

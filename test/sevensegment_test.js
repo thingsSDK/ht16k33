@@ -32,13 +32,13 @@ describe('connect() seven segment display', () => {
         });
 
         it('should render strings and numbers the same way', () => {
-            const frameString = frameFromValue("1.234");
+            const frameString = frameFromValue('1.2341');
             const frameNumber = frameFromValue(1.234);
             assert.deepEqual(frameString, frameNumber);
         });
 
         it('should render colons if present', () => {
-            const timeFrame = frameFromValue("23:19");
+            const timeFrame = frameFromValue('23:19');
             assert.deepEqual(timeFrame, [0x5B, 0x4F, 0x02, 0x06, 0x6F]);
         });
 
@@ -52,6 +52,16 @@ describe('connect() seven segment display', () => {
             assert.deepEqual(eightFrame, [0, 0, 0, 0, 0x7F]);
             const eighteenFrame = frameFromValue(18);
             assert.deepEqual(eighteenFrame, [0, 0, 0, 0x06, 0x7F]);
+        });
+
+        it('should be able to render a space in the middle of the display', () => {
+            const frameWithSpaceInMiddle = frameFromValue('1  2');
+            assert.deepEqual(frameWithSpaceInMiddle, [0x06, 0, 0, 0, 0x5B]);
+        });
+
+        it('should be able to render arrays', () => {
+            const frameFromArray = frameFromValue(['2', '3', ':', '1', '9']);
+            assert.deepEqual(frameFromArray, [0x5B, 0x4F, 0x02, 0x06, 0x6F]);
         });
     });
 });

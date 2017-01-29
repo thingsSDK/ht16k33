@@ -39,13 +39,15 @@ function charToSevenSegment(char, i, array) {
         return undefined;
     } else if( char === '-'){
         return [MINUS, 0];
+    } else if ( char === ' ') {
+        return [0, 0];
     } else {
         return [NUMBERS[Number(char)], 0];
     }
 }
 
-function format(numberOrString) {
-    const stringRep = numberOrString.toString();
+function format(numberOrStringOrArray) {
+    const stringRep = Array.isArray(numberOrStringOrArray) ? numberOrStringOrArray.join('') : numberOrStringOrArray.toString();
     const chars = stringRep.split('');
     const bitmap = chars.map(charToSevenSegment);
     const dotIndicies = chars.map((value, i) => value === '.' ? i : -1).filter(value => value != -1);
