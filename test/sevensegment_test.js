@@ -32,7 +32,7 @@ describe('connect() seven segment display', () => {
         });
 
         it('should render strings and numbers the same way', () => {
-            const frameString = frameFromValue('1.2341');
+            const frameString = frameFromValue('1.234');
             const frameNumber = frameFromValue(1.234);
             assert.deepEqual(frameString, frameNumber);
         });
