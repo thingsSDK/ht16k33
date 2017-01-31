@@ -1,25 +1,39 @@
-# HT16K33 for JavaScript
+# @thingssdk/HT16K33 for JavaScript
 
 [![Build Status](https://travis-ci.org/thingsSDK/HT16K33.svg?branch=master)](https://travis-ci.org/thingsSDK/HT16K33) 
 [![codecov](https://codecov.io/gh/thingsSDK/HT16K33/branch/master/graph/badge.svg)](https://codecov.io/gh/thingsSDK/HT16K33)
 [![Dependency Status](https://david-dm.org/thingsSDK/HT16K33.svg)](https://david-dm.org/thingsSDK/HT16K33)
 [![devDependency Status](https://david-dm.org/thingsSDK/HT16K33/dev-status.svg)](https://david-dm.org/thingsSDK/HT16K33#info=devDependencies)
 
-This package works with LED matrix backpacks with the HT16K33 controller chip specifically the Adafruit 8x8 monochrome, 8x8 bicolor and 16x8 monochrome LED Backpacks.
+A modern JavaScript driver for the LED matrix backpacks with the HT16K33 controller chip. The driver works with any Adafruit 8x8 monochrome, 8x8 bicolor and 16x8 monochrome LED backpacks.
 
 * 8x8 0.8" ([872](https://www.adafruit.com/products/872), [871](https://www.adafruit.com/products/871), [870](https://www.adafruit.com/products/870))
 * 8x8 1.2" ([1049](https://www.adafruit.com/products/1049), [1052](https://www.adafruit.com/products/1052), [1051](https://www.adafruit.com/products/1051), [1050](https://www.adafruit.com/products/1050), [1614](https://www.adafruit.com/products/1614), [1632](https://www.adafruit.com/products/1632), [1857](https://www.adafruit.com/products/1857), [1854](https://www.adafruit.com/products/1854), [1855](https://www.adafruit.com/products/1855), [1856](https://www.adafruit.com/products/1856))
 * 16x8 1.2" ([2044](https://www.adafruit.com/products/2044), [2038](https://www.adafruit.com/products/2038), [2037](https://www.adafruit.com/products/2037), [2040](https://www.adafruit.com/products/2040), [2041](https://www.adafruit.com/products/2041), [2039](https://www.adafruit.com/products/2039), [2043](https://www.adafruit.com/products/2043), [2042](https://www.adafruit.com/products/2042), [2035](https://www.adafruit.com/products/2035), [2036](https://www.adafruit.com/products/2036), [2052](https://www.adafruit.com/products/2052), [2054](https://www.adafruit.com/products/2054))
 * 16x8 LED Matrix Driver Backpack ([1427](https://www.adafruit.com/products/1427))
 
-This works with the 7-Segment backpacks and 14-segment alphanumeric backpacks.
+This module works with the 7-Segment backpacks and 14-segment alphanumeric backpacks.
+
+* 7 segment display ([878](https://www.adafruit.com/products/878), [879](https://www.adafruit.com/products/879), [880](https://www.adafruit.com/products/880), [881](https://www.adafruit.com/products/881)), 
+* 14 segment alphanumeric display ([1911](https://www.adafruit.com/products/1911), [1912](https://www.adafruit.com/products/1912), [2157](https://www.adafruit.com/products/2157), [2158](https://www.adafruit.com/products/2158), [2159](https://www.adafruit.com/products/2159), [2160](https://www.adafruit.com/products/2160)), 
+
+This is also compatible with the Adafruit Feather wings too.
+
+* Adafruit 0.8" 8x16 LED Matrix FeatherWing Display ([3150](https://www.adafruit.com/products/3150), [3151](https://www.adafruit.com/products/3151), [3152](https://www.adafruit.com/products/3152), [3153](https://www.adafruit.com/products/3153), [3154](https://www.adafruit.com/products/3154))
+* Adafruit 0.56" 4-Digit 7-Segment FeatherWing Display ([3106](https://www.adafruit.com/products/3106), [3107](https://www.adafruit.com/products/3107), [3108](https://www.adafruit.com/products/3108), [3109](https://www.adafruit.com/products/3109), [3110](https://www.adafruit.com/products/3110))
+* Adafruit 0.54" Quad Alphanumeric (14 segment) FeatherWing Display ([3127](https://www.adafruit.com/products/3127), [3128](https://www.adafruit.com/products/3128), [3129](https://www.adafruit.com/products/3129)), [3130](https://www.adafruit.com/products/3130), [3131](https://www.adafruit.com/products/3131), [3132](https://www.adafruit.com/products/3132))
+
+## Runtime Compatibility
+
+Works with the thingsSDK-based projects running on the Espruino runtime. More to come.
 
 ## Example Code for 8 x 8 Matrix
 
 ![](docs/8x8.gif)
 
 ```javascript
-import { connect8x8 } from '@thingssdk/HT16K33/espruino';
+
+import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
 
 //Squint a little and you can see the faces!
 
@@ -59,7 +73,7 @@ const frownBmp = [
 
 //Run Example Code
 function main() {
-    const matrix = connect8x8();
+    const matrix = connect8x8Matrix();
 
     //Draws Smiley Face
     matrix.render(smileBmp);
@@ -81,9 +95,10 @@ function main() {
 ![](docs/16x8.gif)
 
 ```javascript
-import { connect16x8 } from '@thingssdk/HT16K33/espruino';
 
-const matrix = connect16x8()
+import { connect16x8Matrix } from '@thingssdk/HT16K33/espruino';
+
+const matrix = connect16x8Matrix()
 // Draw smile and frown side by side
 const smileFrownBmp = [
     0b00111100, 0b00111100,
@@ -123,7 +138,8 @@ function main() {
 ![](docs/8x8bicolor.gif)
 
 ```javascript
-import { connect8x8bicolor } from '@thingssdk/HT16K33/espruino';
+
+import { connect8x8BicolorMatrix } from '@thingssdk/HT16K33/espruino';
 
 //Squint a little and you can see the faces!
 
@@ -174,7 +190,7 @@ const multiSmileBmp = [
 
 //Run Example Code
 function main() {
-    const matrix = connect8x8bicolor();
+    const matrix = connect8x8BicolorMatrix();
 
     //Draws Smiley Face
     matrix.render(smileBmp);
@@ -201,11 +217,12 @@ function main() {
 ![](docs/7segment.gif)
 
 ```javascript
-import { connectSevenSegment } from '@thingssdk/HT16K33/espruino';
+
+import { connect7SegmentDisplay } from '@thingssdk/HT16K33/espruino';
 
 //Run Example Code
 function main() {
-    const matrix = connectSevenSegment();
+    const matrix = connect7SegmentDisplay();
 
     //You can render numbers
     matrix.render(42);
@@ -247,11 +264,11 @@ function main() {
 ![](docs/14segment.gif)
 
 ```javascript
-import { connectFourteenSegment } from '@thingssdk/HT16K33/espruino';
+import { connect14SegmentDisplay } from '@thingssdk/HT16K33/espruino';
 
 //Run Example Code
 function main() {
-    const matrix = connectFourteenSegment();
+    const matrix = connect14SegmentDisplay();
 
     //You can render numbers
     matrix.render(42);
@@ -286,4 +303,57 @@ function main() {
         matrix.render("lowr");
     }, 6000);
 }
+```
+
+
+## Display Options
+
+Any one of the display connect functions, `connect8x8Matrix`, `connect16x8Matrix`, `connect8x8BicolorMatrix`, `connect7SegmentDisplay` and `connect14SegmentDisplay` takes an `options` object.
+
+```javascript
+
+import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
+
+//All options are optional, all default values listed below
+const options = {
+    i2cInterface: I2C1, //From Espruino - some boards have more than one I2C interface
+    clock: 5, // Clock pin on ESP8266 boards
+    data: 4, // Data pin on ESP8266 boards
+    address: 0x70, // Default address for HT16K33 backpacks
+    brightness: 0 // Value from 0 to 15
+}
+
+const matrix = connect8x8Matrix(options)
+
+```
+
+## Setting Brightness
+
+The LED displays are quite bright on their lowest setting (`0`) but it can be adjusted to go all the way up to `15`.
+
+```javascript
+
+import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
+import { setBrightness } from '@thingssdk/HT16K33';
+
+const matrix = connect8x8Matrix();
+
+setBrightness(matrix, 15);
+
+```
+
+If you pass in the value of `16` it'll reset to `0`, `17` will be `1` and so forth.
+
+## Setting Blink Rate
+
+The HT16K33 chip has 4 blink rates `0` through `3`.
+
+```javascript
+
+import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
+import { setBlinkRate } from '@thingssdk/HT16K33';
+
+const matrix = connect8x8Matrix();
+
+setBlinkRate(matrix, 3);
 ```

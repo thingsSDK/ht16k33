@@ -1,7 +1,7 @@
 {
   "name": "@thingssdk/HT16K33",
   "version": "1.0.0",
-  "description": "ES6 compatible display driver for Adafruit matrices, 7 segment and 14 segment displays.",
+  "description": "ES6 compatible display driver for Adafruit HT16K33 matrices, 7 segment and 14 segment displays.",
   "main": "main.js",
   "scripts": {
     "test": "nyc mocha test/*.js",
