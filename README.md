@@ -21,7 +21,7 @@ This is also compatible with the Adafruit Feather wings too.
 
 * Adafruit 0.8" 8x16 LED Matrix FeatherWing Display ([3150](https://www.adafruit.com/products/3150), [3151](https://www.adafruit.com/products/3151), [3152](https://www.adafruit.com/products/3152), [3153](https://www.adafruit.com/products/3153), [3154](https://www.adafruit.com/products/3154))
 * Adafruit 0.56" 4-Digit 7-Segment FeatherWing Display ([3106](https://www.adafruit.com/products/3106), [3107](https://www.adafruit.com/products/3107), [3108](https://www.adafruit.com/products/3108), [3109](https://www.adafruit.com/products/3109), [3110](https://www.adafruit.com/products/3110))
-* Adafruit 0.54" Quad Alphanumeric (14 segment) FeatherWing Display ([3127](https://www.adafruit.com/products/3127), [3128](https://www.adafruit.com/products/3128), [3129](https://www.adafruit.com/products/3129)), [3130](https://www.adafruit.com/products/3130), [3131](https://www.adafruit.com/products/3131), [3132](https://www.adafruit.com/products/3132))
+* Adafruit 0.54" Quad Alphanumeric (14 segment) FeatherWing Display ([3127](https://www.adafruit.com/products/3127), [3128](https://www.adafruit.com/products/3128), [3129](https://www.adafruit.com/products/3129), [3130](https://www.adafruit.com/products/3130), [3131](https://www.adafruit.com/products/3131), [3132](https://www.adafruit.com/products/3132))
 
 ## Runtime Compatibility
 
@@ -98,7 +98,6 @@ function main() {
 
 import { connect16x8Matrix } from '@thingssdk/HT16K33/espruino';
 
-const matrix = connect16x8Matrix()
 // Draw smile and frown side by side
 const smileFrownBmp = [
     0b00111100, 0b00111100,
@@ -124,6 +123,8 @@ const smileMehBmp = [
 
 //Run Example Code
 function main() {
+    const matrix = connect16x8Matrix()
+
     //Render bitmap of smily face and frown
     matrix.render(smileFrownBmp);
 
