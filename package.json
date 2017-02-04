@@ -29,6 +29,10 @@
     "display"
   ],
   "author": "Andrew Chalkley <andrew@chalkley.org>",
+  "contributors": [
+    "Andrew Chalkley <andrew@chalkley.org> (http://forefront.io)",
+    "Patrick Dehn <pedesen@googlemail.com> (http://blog.pedesen.de)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/thingsSDK/ht16k33/issues"
