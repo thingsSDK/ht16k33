@@ -1,9 +1,9 @@
-# @thingssdk/HT16K33 for JavaScript
+# @thingssdk/ht16k33 for JavaScript
 
-[![Build Status](https://travis-ci.org/thingsSDK/HT16K33.svg?branch=master)](https://travis-ci.org/thingsSDK/HT16K33) 
-[![codecov](https://codecov.io/gh/thingsSDK/HT16K33/branch/master/graph/badge.svg)](https://codecov.io/gh/thingsSDK/HT16K33)
-[![Dependency Status](https://david-dm.org/thingsSDK/HT16K33.svg)](https://david-dm.org/thingsSDK/HT16K33)
-[![devDependency Status](https://david-dm.org/thingsSDK/HT16K33/dev-status.svg)](https://david-dm.org/thingsSDK/HT16K33#info=devDependencies)
+[![Build Status](https://travis-ci.org/thingsSDK/ht16k33.svg?branch=master)](https://travis-ci.org/thingsSDK/ht16k33) 
+[![codecov](https://codecov.io/gh/thingsSDK/ht16k33/branch/master/graph/badge.svg)](https://codecov.io/gh/thingsSDK/ht16k33)
+[![Dependency Status](https://david-dm.org/thingsSDK/ht16k33.svg)](https://david-dm.org/thingsSDK/ht16k33)
+[![devDependency Status](https://david-dm.org/thingsSDK/ht16k33/dev-status.svg)](https://david-dm.org/thingsSDK/ht16k33#info=devDependencies)
 
 A modern JavaScript driver for the LED matrix backpacks with the HT16K33 controller chip. The driver works with any Adafruit 8x8 monochrome, 8x8 bicolor and 16x8 monochrome LED backpacks.
 
@@ -33,7 +33,7 @@ Works with the thingsSDK-based projects running on the Espruino runtime. More to
 
 ```javascript
 
-import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
+import { connect8x8Matrix } from '@thingssdk/ht16k33/espruino';
 
 //Squint a little and you can see the faces!
 
@@ -96,7 +96,7 @@ function main() {
 
 ```javascript
 
-import { connect16x8Matrix } from '@thingssdk/HT16K33/espruino';
+import { connect16x8Matrix } from '@thingssdk/ht16k33/espruino';
 
 // Draw smile and frown side by side
 const smileFrownBmp = [
@@ -140,7 +140,7 @@ function main() {
 
 ```javascript
 
-import { connect8x8BicolorMatrix } from '@thingssdk/HT16K33/espruino';
+import { connect8x8BicolorMatrix } from '@thingssdk/ht16k33/espruino';
 
 //Squint a little and you can see the faces!
 
@@ -219,7 +219,7 @@ function main() {
 
 ```javascript
 
-import { connect7SegmentDisplay } from '@thingssdk/HT16K33/espruino';
+import { connect7SegmentDisplay } from '@thingssdk/ht16k33/espruino';
 
 //Run Example Code
 function main() {
@@ -265,7 +265,7 @@ function main() {
 ![](docs/14segment.gif)
 
 ```javascript
-import { connect14SegmentDisplay } from '@thingssdk/HT16K33/espruino';
+import { connect14SegmentDisplay } from '@thingssdk/ht16k33/espruino';
 
 //Run Example Code
 function main() {
@@ -313,7 +313,7 @@ Any one of the display connect functions, `connect8x8Matrix`, `connect16x8Matrix
 
 ```javascript
 
-import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
+import { connect8x8Matrix } from '@thingssdk/ht16k33/espruino';
 
 //All options are optional, all default values listed below
 const options = {
@@ -334,8 +334,8 @@ The LED displays are quite bright on their lowest setting (`0`) but it can be ad
 
 ```javascript
 
-import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
-import { setBrightness } from '@thingssdk/HT16K33';
+import { connect8x8Matrix } from '@thingssdk/ht16k33/espruino';
+import { setBrightness } from '@thingssdk/ht16k33';
 
 const matrix = connect8x8Matrix();
 
@@ -351,8 +351,8 @@ The HT16K33 chip has 4 blink rates `0` through `3`.
 
 ```javascript
 
-import { connect8x8Matrix } from '@thingssdk/HT16K33/espruino';
-import { setBlinkRate } from '@thingssdk/HT16K33';
+import { connect8x8Matrix } from '@thingssdk/ht16k33/espruino';
+import { setBlinkRate } from '@thingssdk/ht16k33';
 
 const matrix = connect8x8Matrix();
 

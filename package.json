@@ -1,5 +1,5 @@
 {
-  "name": "@thingssdk/HT16K33",
+  "name": "@thingssdk/ht16k33",
   "version": "1.0.0",
   "description": "ES6 compatible display driver for Adafruit HT16K33 matrices, 7 segment and 14 segment displays.",
   "main": "main.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/thingsSDK/thingssdk-adafruit-matrix.git"
+    "url": "git+ssh://git@github.com/thingsSDK/ht16k33.git"
   },
   "keywords": [
     "HT16K33",
@@ -31,9 +31,9 @@
   "author": "Andrew Chalkley <andrew@chalkley.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thingsSDK/HT16K33/issues"
+    "url": "https://github.com/thingsSDK/ht16k33/issues"
   },
-  "homepage": "https://github.com/thingsSDK/HT16K33#readme",
+  "homepage": "https://github.com/thingsSDK/ht16k33#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-preset-es2015": "^6.18.0",
