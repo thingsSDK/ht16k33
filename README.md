@@ -86,7 +86,7 @@ function main() {
     //Draws Frowny Face after 2 seconds
     setTimeout(() => {
         matrix.render(frownBmp);
-    }, 11000);
+    }, 2000);
 }
 ```
 
