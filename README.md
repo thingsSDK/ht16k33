@@ -306,15 +306,14 @@ function main() {
 }
 ```
 
-## Example Code for 24 Segment Bargrah
+## Example Code for 24 Segment Bargraph
 
 ![](docs/24segments.gif)
 
 
 ```
-import { connect8x8BicolorMatrix } from '@thingssdk/ht16k33/espruino';
+import { BicolorBargraph } from '@thingssdk/ht16k33/espruino';
 var intervalId =0;
-//Squint a little and you can see the faces!
 
 const patterns = [
     // Grow green 1/2
@@ -369,16 +368,14 @@ const patterns = [
 
 //Run Example Code
 function main() {
-    const matrix = connect8x8BicolorMatrix()
+    const bargraph = BicolorBargraph()
 
     var index = 0;
 
-    //Draws Neutral Face after 1 second
     intervalId = setInterval(() => {
         matrix.render(patterns[index++]);
         if (index >= patterns.length) index = 0;
     }, 250);
-    console.log('interval = ' + intervalId)
 }
 ````
 
